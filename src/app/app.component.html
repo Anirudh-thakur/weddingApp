@@ -2,7 +2,7 @@
   <button mat-icon-button (click)="toggleMenu()" class="menu-button" *ngIf="isScreenSmall">
     <mat-icon>menu</mat-icon>
   </button>
-  <nav class = "menu-grp" [class.hide]="!menuOpen">
+  <nav class="menu-grp" [class.hide]="isScreenSmall && !menuOpen">
     <span class="menu-item" mat-raised-button color="primary" (click)="redirectToGoogleForm()">
      <mat-icon class="menu-icon">note_add</mat-icon> Hotel Check-in
     </span>

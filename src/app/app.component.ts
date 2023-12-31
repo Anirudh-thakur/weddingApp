@@ -22,6 +22,10 @@ export class AppComponent {
   }
   checkScreenSize() {
     this.isScreenSmall = window.innerWidth < 768; // Example breakpoint
+    if (!this.isScreenSmall) {
+      this.menuOpen = true;
+    }
+
   }
   redirectToGoogleForm() : void{
     this.document.location.href = 'https://forms.gle/kyhNqZyo6XbTaZUZ8';

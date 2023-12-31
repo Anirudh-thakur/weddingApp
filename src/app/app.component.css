@@ -2,6 +2,7 @@
     margin-left: auto;  /* Aligns the nav to the right */
     display: flex;
     gap: 3em;
+    cursor:grab;
   }
   .menu-grp.hide {
     display: none;
@@ -37,6 +38,13 @@
       margin-top: 105px;
       flex-direction: column;
       gap: 1em;
+      display: none;
       /* Adjust styling as needed for mobile view */
+    }
+    .menu-grp.hide {
+      display: none;
+    }
+    .menu-grp:not(.hide) {
+      display: flex; /* Show when menu is open */
     }
   }
