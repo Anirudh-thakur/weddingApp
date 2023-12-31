@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'weddingApp';
+  menuOpen: boolean = false;
+  isScreenSmall: boolean = false;
+
+  constructor(@Inject(DOCUMENT) private document: Document) { 
+    this.checkScreenSize();
+    window.onresize = () => {
+      this.checkScreenSize();
+    }
+  }
+
+  toggleMenu() : void{
+    this.menuOpen = !this.menuOpen;
+  }
+  checkScreenSize() {
+    this.isScreenSmall = window.innerWidth < 768; // Example breakpoint
+  }
+  redirectToGoogleForm() : void{
+    this.document.location.href = 'https://forms.gle/kyhNqZyo6XbTaZUZ8';
+  }
 }

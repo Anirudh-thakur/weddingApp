@@ -1,0 +1,42 @@
+.menu-grp {
+    margin-left: auto;  /* Aligns the nav to the right */
+    display: flex;
+    gap: 3em;
+  }
+  .menu-grp.hide {
+    display: none;
+  }
+  
+  .menu-button {
+    display: none;
+    background-color: #aa0068;
+    color: white;
+  }
+  
+  .menu-item {
+    color:azure;
+    margin: 0 5px;  /* Adds some spacing between buttons */
+  }
+  
+  mat-toolbar {
+    padding: 0 20px;  /* Adds some padding to the toolbar */
+  }
+  .menu-icon{
+    margin: 0 5px;
+  }
+  .mat-toolbar{ 
+    background-color: #aa0068;
+   }
+   @media (max-width: 768px) {
+    .menu-button {
+      display: block;
+    }
+  
+    .menu-grp {
+      font-size: 16px;
+      margin-top: 105px;
+      flex-direction: column;
+      gap: 1em;
+      /* Adjust styling as needed for mobile view */
+    }
+  }
